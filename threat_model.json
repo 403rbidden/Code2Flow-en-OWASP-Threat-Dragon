@@ -1,0 +1,32 @@
+{
+    "name": "Threat Model from GV",
+    "description": "Modelo de amenazas generado desde un archivo .gv con pytm",
+    "assumptions": [
+        "Este modelo asume que los datos est\u00e1n en un entorno seguro."
+    ],
+    "actors": [
+        {
+            "name": "User",
+            "description": "Un usuario interactuando con el sistema."
+        }
+    ],
+    "processes": [
+        {
+            "name": "Web Application",
+            "description": "Procesa solicitudes del usuario."
+        }
+    ],
+    "dataflows": [
+        {
+            "name": "User to WebApp",
+            "description": "Flujo de datos del usuario a la aplicaci\u00f3n."
+        }
+    ],
+    "boundaries": [
+        {
+            "name": "Trust Boundary",
+            "description": "L\u00edmite entre el usuario y la aplicaci\u00f3n."
+        }
+    ],
+    "findings": []
+}
