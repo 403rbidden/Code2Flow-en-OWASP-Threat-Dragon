@@ -4,29 +4,338 @@
     "assumptions": [
         "Este modelo asume que los datos están en un entorno seguro."
     ],
-    "actors": [
-        {
-            "name": "User",
-            "description": "Un usuario interactuando con el sistema."
-        }
-    ],
+    "actors": [],
     "processes": [
         {
-            "name": "Web Application",
-            "description": "Procesa solicitudes del usuario."
-        }
-    ],
-    "dataflows": [
+            "name": "cash_out()"
+        },
         {
-            "name": "User to WebApp",
-            "description": "Flujo de datos del usuario a la aplicación."
-        }
-    ],
-    "boundaries": [
+            "name": "login()"
+        },
         {
-            "name": "Trust Boundary",
-            "description": "Límite entre el usuario y la aplicación."
+            "name": "options()"
+        },
+        {
+            "name": "signup()"
+        },
+        {
+            "name": "transfer_chips()"
+        },
+        {
+            "name": "is_valid_amt?()"
+        },
+        {
+            "name": "bet()"
+        },
+        {
+            "name": "game()"
+        },
+        {
+            "name": "hit_or_stay()"
+        },
+        {
+            "name": "show()"
+        },
+        {
+            "name": "test_bet()"
+        },
+        {
+            "name": "deal()"
+        },
+        {
+            "name": "hit()"
+        },
+        {
+            "name": "hit_dealer()"
+        },
+        {
+            "name": "hit_or_stay()"
+        },
+        {
+            "name": "initialize()"
+        },
+        {
+            "name": "bet()"
+        },
+        {
+            "name": "check_for_blackjack()"
+        },
+        {
+            "name": "dealer_hit_or_stay()"
+        },
+        {
+            "name": "double_down()"
+        },
+        {
+            "name": "initialize()"
+        },
+        {
+            "name": "perform_results()"
+        },
+        {
+            "name": "player_hit_or_stay()"
+        },
+        {
+            "name": "prepare_game()"
+        },
+        {
+            "name": "test_game()"
+        },
+        {
+            "name": "blackjack()"
+        },
+        {
+            "name": "busted()"
+        },
+        {
+            "name": "value()"
+        },
+        {
+            "name": "bj_init()"
+        },
+        {
+            "name": "hand_value()"
+        },
+        {
+            "name": "create_from_value()"
+        },
+        {
+            "name": "initialize()"
+        },
+        {
+            "name": "is_ace()"
+        },
+        {
+            "name": "rank()"
+        },
+        {
+            "name": "suit()"
+        },
+        {
+            "name": "to_s()"
+        },
+        {
+            "name": "value_ace_low()"
+        },
+        {
+            "name": "bet()"
+        },
+        {
+            "name": "prepare_game()"
+        },
+        {
+            "name": "test_initialize()"
+        },
+        {
+            "name": "fill()"
+        },
+        {
+            "name": "initialize()"
+        },
+        {
+            "name": "length()"
+        },
+        {
+            "name": "pop()"
+        },
+        {
+            "name": "shuffle()"
+        },
+        {
+            "name": "test_not_nil_cards()"
+        },
+        {
+            "name": "clear()"
+        },
+        {
+            "name": "initialize()"
+        },
+        {
+            "name": "add_card()"
+        },
+        {
+            "name": "access_denied()"
+        },
+        {
+            "name": "authorize?()"
+        },
+        {
+            "name": "login_required()"
+        },
+        {
+            "name": "protect?()"
+        },
+        {
+            "name": "store_location()"
+        },
+        {
+            "name": "initialize_bet()"
+        },
+        {
+            "name": "cards()"
+        },
+        {
+            "name": "flush?()"
+        },
+        {
+            "name": "four_of_a_kind?()"
+        },
+        {
+            "name": "full_house?()"
+        },
+        {
+            "name": "hand()"
+        },
+        {
+            "name": "hand_order()"
+        },
+        {
+            "name": "high_card?()"
+        },
+        {
+            "name": "initialize()"
+        },
+        {
+            "name": "jacks_or_better?()"
+        },
+        {
+            "name": "order()"
+        },
+        {
+            "name": "pair?()"
+        },
+        {
+            "name": "ranks()"
+        },
+        {
+            "name": "rating()"
+        },
+        {
+            "name": "royal_flush?()"
+        },
+        {
+            "name": "straight?()"
+        },
+        {
+            "name": "straight_flush?()"
+        },
+        {
+            "name": "suits()"
+        },
+        {
+            "name": "three_of_a_kind?()"
+        },
+        {
+            "name": "to_s()"
+        },
+        {
+            "name": "two_pair?()"
+        },
+        {
+            "name": "test_poker_hand()"
+        },
+        {
+            "name": "RouletteSpace()"
+        },
+        {
+            "name": "initialize()"
+        },
+        {
+            "name": "go_to_login()"
+        },
+        {
+            "name": "play_blackjack()"
+        },
+        {
+            "name": "play_video_poker()"
+        },
+        {
+            "name": "test_story_one()"
+        },
+        {
+            "name": "authenticate()"
+        },
+        {
+            "name": "change_chips()"
+        },
+        {
+            "name": "change_password()"
+        },
+        {
+            "name": "crypt_password()"
+        },
+        {
+            "name": "sha1()"
+        },
+        {
+            "name": "test_auth()"
+        },
+        {
+            "name": "test_passwordchange()"
+        },
+        {
+            "name": "draw()"
+        },
+        {
+            "name": "game()"
+        },
+        {
+            "name": "show()"
+        },
+        {
+            "name": "test_video_poker_after_blackjack()"
+        },
+        {
+            "name": "deal()"
+        },
+        {
+            "name": "redraw()"
+        },
+        {
+            "name": "bet()"
+        },
+        {
+            "name": "draw()"
+        },
+        {
+            "name": "hold_card_toggle()"
+        },
+        {
+            "name": "initialize()"
+        },
+        {
+            "name": "payout()"
+        },
+        {
+            "name": "perform_results()"
+        },
+        {
+            "name": "make_cards()"
+        },
+        {
+            "name": "test_game()"
+        },
+        {
+            "name": "rating()"
+        },
+        {
+            "name": "render_video_poker_pay_schedule()"
+        },
+        {
+            "name": "lost?()"
+        },
+        {
+            "name": "payout()"
+        },
+        {
+            "name": "schedule()"
+        },
+        {
+            "name": "vp_init()"
+        },
+        {
+            "name": "index()"
         }
     ],
-    "findings": []
+    "dataflows": []
 }
