@@ -79,8 +79,8 @@ def gv_to_pytm(file_path):
         # Convertir todos los sets a listas en el modelo
         model_data_cleaned = convert_sets_to_lists(model_data)
 
-        with open(OUTPUT_FILE_PATH, "w") as output_file:
-            json.dump(model_data_cleaned, output_file, indent=4)
+        with open(OUTPUT_FILE_PATH, "w", encoding="utf-8") as output_file:
+            json.dump(model_data_cleaned, output_file, indent=4, ensure_ascii=False)
         print("Modelo exportado correctamente.")
     except Exception as e:
         print(f"Error al exportar el modelo: {e}")
