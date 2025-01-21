@@ -1,10 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Threat Model Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>{{ name }}</h1>
-    <p>{{ description }}</p>
+    <p><strong>Description:</strong> {{ description }}</p>
+    <p><strong>Owner:</strong> {{ owner }}</p>
+    <p><strong>Reviewer:</strong> {{ reviewer }}</p>
+
+    <div class="section">
+        <h2>Assumptions</h2>
+        <ul>
+        {% for assumption in assumptions %}
+            <li>{{ assumption }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Actors</h2>
+        <ul>
+        {% for actor in actors %}
+            <li><strong>{{ actor.name }}:</strong> {{ actor.description }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Processes</h2>
+        <ul>
+        {% for process in processes %}
+            <li><strong>{{ process.name }}:</strong> {{ process.description }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Data Flows</h2>
+        <ul>
+        {% for flow in dataflows %}
+            <li><strong>{{ flow.name }}:</strong> {{ flow.description }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Boundaries</h2>
+        <ul>
+        {% for boundary in boundaries %}
+            <li><strong>{{ boundary.name }}:</strong> {{ boundary.description }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Findings</h2>
+        <ul>
+        {% for finding in findings %}
+            <li><strong>{{ finding.title }}:</strong> {{ finding.description }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Threats</h2>
+        <ul>
+        {% for cell in diagramJson.cells %}
+            {% if cell.threats %}
+                <li>
+                    <strong>Element:</strong> {{ cell.attrs.text.text }}
+                    <ul>
+                    {% for threat in cell.threats %}
+                        <li>
+                            <strong>{{ threat.title }}</strong> ({{ threat.severity }}) - {{ threat.description }}
+                            <br><em>Mitigation:</em> {{ threat.mitigation }}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
